@@ -1,0 +1,274 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Comfortaa:wght@700&family=Jua&family=Nova+Round&family=Poppins&family=Varela+Round&display=swap');
+
+
+:root{
+  --primary-color: orangered;
+  --primary-color-dark: #172237;
+  --secondary-color: #ffecd2;
+  --text-dark: #273248;
+  --text-light: #fc7643;
+  --extra-light: #ffffff;
+  --max-width:100%;
+
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Comfortaa";
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(  --secondary-color);
+ 
+    /* -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none; */
+}body::-webkit-scrollbar{
+  background-color: transparent ;
+  }
+  
+  body::-webkit-scrollbar-thumb{
+  background-color: orangered ;
+  border-radius: 20px;
+  }
+
+header {
+  background-color: var(--secondary-color);
+  text-align: center;
+}
+nav {
+  padding: 1rem;
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  max-width: var(--max-width);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 2;
+  background-color: var(--primary-color-dark);
+  border-bottom-left-radius: 25px;
+}
+.nav__logo a{
+  text-decoration: none;
+  color: var(--extra-light) ;
+}
+
+.nav__logo {
+  font-family: "comfortaa";
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #fff;
+  cursor: pointer;
+}
+
+
+.nav__logo span {
+  color: var(--primary-color);
+}
+ nav h2{
+  color: #fff;
+ }
+
+
+ footer a {
+  margin-left: 40px;
+  text-decoration: none;
+  color: #fff;
+  height: 100%;
+  padding: 20px 0;
+  display: inline-block;
+}
+
+ footer a:hover {
+  color: #ddd;
+}
+
+
+section {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+section h2 {
+  font-size: 2rem;
+}
+
+section > p {
+  text-align: center;
+}
+
+
+
+.section__container {
+  max-width: var(--max-width);
+  margin: auto;
+  padding: 5rem 1rem;
+  
+}
+.about .company-info {
+  margin-top: 30px;
+}
+
+.about h3 {
+  margin: 30px 0 10px;
+}
+
+
+
+.contact .row {
+  margin: 60px 0 90px;
+  display: flex;
+  max-width: 1200px;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.contact .row .col {
+  padding: 0 10px;
+  width: calc(100% / 2 - 50px);
+}
+
+.contact .col p {
+  margin-bottom: 10px;
+}
+
+.contact .col p i {
+  color: #7a7a7a;
+  margin-right: 10px;
+}
+
+.contact form input {
+  height: 45px;
+  margin-bottom: 20px;
+  padding: 10px;
+  width: 100%;
+  font-size: 16px;
+  outline: none;
+  border: 1px solid orangered;
+}
+
+.contact form textarea {
+  padding: 10px;
+  width: 100%;
+  font-size: 16px;
+  height: 150px;
+  outline: none;
+  resize: vertical;
+  border: 1px solid orangered;
+}
+
+.btn {
+  padding: 0.75rem 2rem;
+  outline: none;
+  border: 2px solid orangered;
+  font-size: 1rem;
+  color: var(--extra-light);
+  background-color: var(--primary-color);
+  border-radius: 5rem;
+  cursor: pointer;
+  transition: 1.2s;
+}
+
+.btn:hover {
+  background-color: transparent;
+  color: var(--primary-color);
+  border: 2px solid orangered;
+
+}
+
+
+.footer {
+  background-color: var(--text-dark);
+}
+
+.footer__container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 5rem;
+  color: var(--secondary-color);
+}
+
+.footer__col h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 2rem;
+  font-family: 'comfortaa';
+}
+
+.footer__col h3 span {
+  color: var(--primary-color);
+}
+
+.footer__col p {
+  font-size:1rem;
+  margin-bottom: 1rem;
+  cursor: pointer;
+  transition: 0.1s ease;
+}
+/* .footer__col p:hover {
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+  cursor: pointer;
+  transition: 0.3s;
+  color: orangered;
+} */
+
+.footer__col p span {
+  font-weight: 600;
+}
+
+.footer__col h4 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 2rem;
+  color: orangered;
+}
+
+.footer__bar {
+  max-width: var(--max-width);
+  margin: auto;
+  padding: 0.5rem;
+  text-align: center;
+  font-size: 0.8rem;
+  color: var(--secondary-color);
+  border-top: 1px solid var(--text-light);
+}
+
+
+
+.footer__container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 5rem;
+  color: var(--secondary-color);
+}
+/* end*/
+
+@media screen and (max-width: 860px) {
+  .contact .row {
+    flex-direction: column;
+  }
+
+  .contact .row .col {
+    width: 100%;
+  }
+
+  .contact .row .col:last-child {
+    margin-top: 40px;
+  }
+
+  .footer__container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
